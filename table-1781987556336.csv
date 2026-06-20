@@ -1,0 +1,4 @@
+﻿File,Description
+**[index.html](sandbox:///mnt/agents/output/index.html)**,Added inline emergency script + CSS fallback
+**[styles.css](sandbox:///mnt/agents/output/styles.css)**,*(unchanged)*
+**[script.js](sandbox:///mnt/agents/output/script.js)**,Rewritten with robust error handling
