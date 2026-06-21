@@ -3,125 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Royal Fade Barbershop - Premium men's grooming since 2012. Expert haircuts, skin fades, beard trims, and hot towel shaves in a luxury environment.">
-    <meta name="keywords" content="barbershop, men's haircut, skin fade, beard trim, hot towel shave, grooming, barber, premium barbershop">
-    <meta name="author" content="Royal Fade Barbershop">
-    <meta name="theme-color" content="#C9A84C">
-    <title>Royal Fade Barbershop | Premium Men's Grooming Since 2012</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="The Gentlemen's Den - Premium Barber Shop. Expert haircuts, beard trims, and grooming services in a luxury environment.">
+    <meta name="keywords" content="barber shop, haircut, beard trim, grooming, men's salon, premium barber">
+    <title>The Gentlemen's Den | Premium Barber Shop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        /* Emergency: Hide loader if JS fails */
-        @keyframes hideLoader { 0%, 90% { opacity: 1; visibility: visible; } 100% { opacity: 0; visibility: hidden; } }
-        #loading-screen { animation: hideLoader 4s ease forwards; }
-    </style>
-    <noscript>
-        <style>
-            #loading-screen { display: none !important; }
-            .reveal { opacity: 1 !important; transform: none !important; }
-        </style>
-    </noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 <base target="_blank">
 </head>
 <body>
     <!-- Loading Screen -->
-    <div id="loading-screen">
-        <div class="loader-content">
-            <div class="loader-scissors"><i class="fas fa-cut"></i></div>
-            <div class="loader-brand">Royal Fade</div>
-            <div class="loader-bar"><div class="loader-progress"></div></div>
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-scissors">
+                <i class="fas fa-cut"></i>
+            </div>
+            <h2>The Gentlemen's Den</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
         </div>
     </div>
-
-    <!-- Back to Top -->
-    <button id="back-to-top" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-logo">
+            <a href="#home" class="logo">
                 <i class="fas fa-cut"></i>
-                <div class="logo-text"><span class="logo-main">Royal Fade</span><span class="logo-sub">Barbershop</span></div>
+                <span>The Gentlemen's Den</span>
             </a>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#barbers" class="nav-link">Barbers</a></li>
-                <li><a href="#gallery" class="nav-link">Gallery</a></li>
-                <li><a href="#pricing" class="nav-link">Pricing</a></li>
-                <li><a href="#testimonials" class="nav-link">Reviews</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <a href="#booking" class="btn btn-gold nav-cta">Book Now</a>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-            </button>
-        </div>
-        <div class="mobile-menu" id="mobile-menu">
-            <div class="mobile-menu-header">
-                <a href="#home" class="nav-logo"><i class="fas fa-cut"></i><span style="font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--text);">Royal Fade</span></a>
-                <button class="mobile-close" id="mobile-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#team" class="nav-link">Barbers</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
-            <ul class="mobile-nav-menu">
-                <li><a href="#home" class="mobile-nav-link">Home</a></li>
-                <li><a href="#about" class="mobile-nav-link">About</a></li>
-                <li><a href="#services" class="mobile-nav-link">Services</a></li>
-                <li><a href="#barbers" class="mobile-nav-link">Barbers</a></li>
-                <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
-                <li><a href="#pricing" class="mobile-nav-link">Pricing</a></li>
-                <li><a href="#testimonials" class="mobile-nav-link">Reviews</a></li>
-                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
-            </ul>
-            <a href="#booking" class="btn btn-gold btn-full mobile-cta">Book Appointment</a>
+            <a href="#booking" class="btn btn-primary nav-cta">Book Now</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="#home" class="mobile-link">Home</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#services" class="mobile-link">Services</a>
+            <a href="#team" class="mobile-link">Barbers</a>
+            <a href="#pricing" class="mobile-link">Pricing</a>
+            <a href="#gallery" class="mobile-link">Gallery</a>
+            <a href="#testimonials" class="mobile-link">Reviews</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+            <a href="#booking" class="btn btn-primary mobile-cta">Book Appointment</a>
+        </div>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-bg"><div class="hero-overlay"></div><div class="hero-gold-accent"></div></div>
+        <div class="hero-bg">
+            <div class="hero-overlay"></div>
+        </div>
         <div class="hero-content">
-            <div class="hero-badge"><i class="fas fa-crown"></i><span>Est. 2012 — Premium Men's Grooming</span></div>
-            <h1 class="hero-title">Where <span class="gold-text">Style</span> Meets <span class="gold-text">Precision</span></h1>
-            <p class="hero-subtitle">Experience the art of grooming at Royal Fade. Our master barbers craft impeccable cuts, sharp fades, and perfectly sculpted beards in an atmosphere of refined masculinity.</p>
-            <div class="hero-cta">
-                <a href="#booking" class="btn btn-gold btn-lg"><i class="fas fa-calendar-check"></i>Book Appointment</a>
-                <a href="#services" class="btn btn-outline-gold btn-lg"><i class="fas fa-list"></i>View Services</a>
+            <div class="hero-badge reveal-up">
+                <i class="fas fa-star"></i>
+                <span>Premium Barber Shop</span>
             </div>
-            <div class="hero-stats">
-                <div class="hero-stat"><span class="hero-stat-num">14+</span><span class="hero-stat-label">Years Experience</span></div>
-                <div class="hero-stat-divider"></div>
-                <div class="hero-stat"><span class="hero-stat-num">25K+</span><span class="hero-stat-label">Happy Clients</span></div>
-                <div class="hero-stat-divider"></div>
-                <div class="hero-stat"><span class="hero-stat-num">4.9</span><span class="hero-stat-label">Google Rating</span></div>
+            <h1 class="hero-title reveal-up">
+                Where Style<br>
+                <span class="gold-text">Meets Precision</span>
+            </h1>
+            <p class="hero-subtitle reveal-up">
+                Experience the art of grooming at its finest. Our master barbers craft
+                timeless looks with precision and passion since 2015.
+            </p>
+            <div class="hero-buttons reveal-up">
+                <a href="#booking" class="btn btn-primary btn-lg">
+                    <i class="fas fa-calendar-check"></i>
+                    Book Appointment
+                </a>
+                <a href="#services" class="btn btn-outline btn-lg">
+                    <i class="fas fa-list"></i>
+                    View Services
+                </a>
+            </div>
+            <div class="hero-stats reveal-up">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="8500">0</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="9">0</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="12">0</span>
+                    <span class="stat-label">Expert Barbers</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="98">0</span>
+                    <span class="stat-label">% Satisfaction</span>
+                </div>
             </div>
         </div>
-        <div class="hero-scroll-indicator"><span>Scroll</span><div class="scroll-line"><div class="scroll-dot"></div></div></div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
     </section>
 
     <!-- About Section -->
     <section class="about" id="about">
-        <div class="section-container">
+        <div class="container">
             <div class="about-grid">
-                <div class="about-images">
-                    <div class="about-img-main"><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&h=700&fit=crop" alt="Royal Fade Barbershop interior" loading="lazy"></div>
-                    <div class="about-img-accent"><img src="https://images.unsplash.com/photo-1599351431613-18ef1fdd27e1?w=300&h=300&fit=crop" alt="Barber tools close-up" loading="lazy"></div>
-                    <div class="about-experience-badge"><span class="badge-num">14</span><span class="badge-text">Years of<br>Excellence</span></div>
-                </div>
-                <div class="about-content">
-                    <span class="section-tag">About Us</span>
-                    <h2 class="section-title">The Royal <span class="gold-text">Experience</span></h2>
-                    <p class="about-text">Founded in 2012, Royal Fade Barbershop has grown from a single-chair operation into one of the most respected grooming destinations in the city. We believe that a great haircut is more than just a service — it's an experience that builds confidence and defines personal style.</p>
-                    <p class="about-text">Our master barbers combine traditional techniques with modern trends, delivering precision cuts, flawless fades, and immaculate beard sculpting. Every visit is tailored to your unique look, lifestyle, and preferences.</p>
-                    <div class="about-values">
-                        <div class="value-item"><div class="value-icon"><i class="fas fa-medal"></i></div><div class="value-info"><span class="value-title">Master Craftsmen</span><span class="value-desc">Certified barbers with 10+ years experience</span></div></div>
-                        <div class="value-item"><div class="value-icon"><i class="fas fa-gem"></i></div><div class="value-info"><span class="value-title">Premium Products</span><span class="value-desc">Only the finest grooming products used</span></div></div>
-                        <div class="value-item"><div class="value-icon"><i class="fas fa-clock"></i></div><div class="value-info"><span class="value-title">Punctual Service</span><span class="value-desc">Your time is respected, always on schedule</span></div></div>
+                <div class="about-images reveal-left">
+                    <div class="about-img-main">
+                        <img src="https://images.unsplash.com/photo-1599351431202-6e0c0f3a24f9?w=600&h=700&fit=crop" alt="Barber shop interior" loading="lazy">
                     </div>
-                    <a href="#services" class="btn btn-gold">Explore Our Services</a>
+                    <div class="about-img-accent">
+                        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=300&h=300&fit=crop" alt="Barber tools" loading="lazy">
+                    </div>
+                    <div class="experience-badge">
+                        <span class="exp-number">9+</span>
+                        <span class="exp-text">Years of<br>Excellence</span>
+                    </div>
+                </div>
+                <div class="about-content reveal-right">
+                    <span class="section-label">About Us</span>
+                    <h2 class="section-title">Crafting Confidence,<br>One Cut at a Time</h2>
+                    <p class="about-text">
+                        Founded in 2015, The Gentlemen's Den has established itself as the premier destination 
+                        for discerning gentlemen who demand nothing but the best. Our philosophy is simple: 
+                        every man deserves to look and feel his absolute best.
+                    </p>
+                    <p class="about-text">
+                        We combine traditional barbering techniques with modern styling trends, creating a unique 
+                        experience that honors the timeless art of grooming while embracing contemporary fashion.
+                    </p>
+                    <div class="about-values">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <div class="value-text">
+                                <h4>Premium Quality</h4>
+                                <p>Only the finest products and techniques</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="value-text">
+                                <h4>Passionate Craft</h4>
+                                <p>Every cut is a work of art</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="value-text">
+                                <h4>Trusted Service</h4>
+                                <p>Your satisfaction is guaranteed</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#team" class="btn btn-primary">
+                        Meet Our Barbers
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -129,141 +191,422 @@
 
     <!-- Services Section -->
     <section class="services" id="services">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-tag">What We Offer</span>
-                <h2 class="section-title">Our <span class="gold-text">Services</span></h2>
-                <p class="section-subtitle">Premium grooming services tailored to the modern gentleman</p>
+        <div class="container">
+            <div class="section-header center reveal-up">
+                <span class="section-label">Our Services</span>
+                <h2 class="section-title">Premium Grooming<br><span class="gold-text">Services</span></h2>
+                <p class="section-subtitle">From classic cuts to modern styles, we offer a complete range of grooming services</p>
             </div>
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-cut"></i></div>
-                    <div class="service-content">
-                        <h3 class="service-name">Classic Haircut</h3>
-                        <p class="service-desc">Precision cut with consultation, shampoo, and style. Includes neck shave and hot towel finish.</p>
-                        <div class="service-meta"><span class="service-price">$35</span><span class="service-duration"><i class="fas fa-clock"></i> 30 min</span></div>
-                        <a href="#booking" class="btn btn-outline-gold btn-sm service-book">Book Now</a>
+                <div class="service-card reveal-up">
+                    <div class="service-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>Classic Haircut</h3>
+                    <p>Precision cut tailored to your face shape and style preference. Includes consultation and styling.</p>
+                    <div class="service-price">From $35</div>
+                    <a href="#booking" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal-up">
+                    <div class="service-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Beard Trim & Shape</h3>
+                    <p>Expert beard shaping and trimming with hot towel treatment. The perfect finish to any look.</p>
+                    <div class="service-price">From $25</div>
+                    <a href="#booking" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal-up">
+                    <div class="service-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Hair Wash & Treatment</h3>
+                    <p>Deep cleansing wash with premium products. Includes scalp massage and conditioning treatment.</p>
+                    <div class="service-price">From $20</div>
+                    <a href="#booking" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal-up">
+                    <div class="service-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Hot Towel Shave</h3>
+                    <p>Traditional straight razor shave with hot towels, premium oils, and aftershave balm.</p>
+                    <div class="service-price">From $40</div>
+                    <a href="#booking" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal-up">
+                    <div class="service-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Kids Haircut</h3>
+                    <p>Patient, friendly service for young gentlemen. Fun environment with skilled barbers.</p>
+                    <div class="service-price">From $25</div>
+                    <a href="#booking" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card featured reveal-up">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="service-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>The Gentlemen's Package</h3>
+                    <p>Our signature full-service experience: haircut, beard trim, hot towel shave, and styling.</p>
+                    <div class="service-price">$85</div>
+                    <a href="#booking" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="container">
+            <div class="section-header center reveal-up">
+                <span class="section-label">Our Team</span>
+                <h2 class="section-title">Meet Our<br><span class="gold-text">Master Barbers</span></h2>
+                <p class="section-subtitle">Skilled craftsmen dedicated to the art of grooming</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card reveal-up">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face" alt="Marcus Johnson" loading="lazy">
+                        <div class="team-overlay">
+                            <div class="team-socials">
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Marcus Johnson</h3>
+                        <span class="team-role">Master Barber & Founder</span>
+                        <p class="team-bio">15+ years of experience. Specializes in classic cuts and beard sculpting.</p>
+                        <div class="team-specialty">
+                            <span>Classic Cuts</span>
+                            <span>Beard Art</span>
+                        </div>
                     </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-layer-group"></i></div>
-                    <div class="service-content">
-                        <h3 class="service-name">Skin Fade</h3>
-                        <p class="service-desc">Expert fade techniques from zero to skin. Includes detailed lineup, texture work, and premium styling.</p>
-                        <div class="service-meta"><span class="service-price">$40</span><span class="service-duration"><i class="fas fa-clock"></i> 45 min</span></div>
-                        <a href="#booking" class="btn btn-outline-gold btn-sm service-book">Book Now</a>
+                <div class="team-card reveal-up">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop&crop=face" alt="David Chen" loading="lazy">
+                        <div class="team-overlay">
+                            <div class="team-socials">
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>David Chen</h3>
+                        <span class="team-role">Senior Stylist</span>
+                        <p class="team-bio">Expert in modern fades, textured cuts, and Asian hair types.</p>
+                        <div class="team-specialty">
+                            <span>Modern Fades</span>
+                            <span>Textured Cuts</span>
+                        </div>
                     </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-user-tie"></i></div>
-                    <div class="service-content">
-                        <h3 class="service-name">Beard Trim</h3>
-                        <p class="service-desc">Shape, sculpt, and define your beard with precision. Includes hot towel treatment and beard oil application.</p>
-                        <div class="service-meta"><span class="service-price">$25</span><span class="service-duration"><i class="fas fa-clock"></i> 20 min</span></div>
-                        <a href="#booking" class="btn btn-outline-gold btn-sm service-book">Book Now</a>
+                <div class="team-card reveal-up">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face" alt="James Williams" loading="lazy">
+                        <div class="team-overlay">
+                            <div class="team-socials">
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>James Williams</h3>
+                        <span class="team-role">Color Specialist</span>
+                        <p class="team-bio">Certified colorist. Creates stunning natural and creative color looks.</p>
+                        <div class="team-specialty">
+                            <span>Hair Color</span>
+                            <span>Highlights</span>
+                        </div>
                     </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-hot-tub"></i></div>
-                    <div class="service-content">
-                        <h3 class="service-name">Hot Towel Shave</h3>
-                        <p class="service-desc">Traditional straight razor shave with hot towels, pre-shave oil, and premium aftershave balm.</p>
-                        <div class="service-meta"><span class="service-price">$45</span><span class="service-duration"><i class="fas fa-clock"></i> 40 min</span></div>
-                        <a href="#booking" class="btn btn-outline-gold btn-sm service-book">Book Now</a>
+                <div class="team-card reveal-up">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=500&fit=crop&crop=face" alt="Robert Taylor" loading="lazy">
+                        <div class="team-overlay">
+                            <div class="team-socials">
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-wind"></i></div>
-                    <div class="service-content">
-                        <h3 class="service-name">Hair Styling</h3>
-                        <p class="service-desc">Professional styling for any occasion. Includes blow-dry, product application, and personalized tips.</p>
-                        <div class="service-meta"><span class="service-price">$30</span><span class="service-duration"><i class="fas fa-clock"></i> 25 min</span></div>
-                        <a href="#booking" class="btn btn-outline-gold btn-sm service-book">Book Now</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-child"></i></div>
-                    <div class="service-content">
-                        <h3 class="service-name">Kids Haircut</h3>
-                        <p class="service-desc">Gentle, patient service for young gentlemen. Fun atmosphere with treats and a great experience.</p>
-                        <div class="service-meta"><span class="service-price">$25</span><span class="service-duration"><i class="fas fa-clock"></i> 25 min</span></div>
-                        <a href="#booking" class="btn btn-outline-gold btn-sm service-book">Book Now</a>
-                    </div>
-                </div>
-                <div class="service-card featured-service">
-                    <div class="service-badge">Most Popular</div>
-                    <div class="service-icon"><i class="fas fa-crown"></i></div>
-                    <div class="service-content">
-                        <h3 class="service-name">Premium Grooming</h3>
-                        <p class="service-desc">The ultimate experience: haircut, beard trim, hot towel shave, facial treatment, and scalp massage.</p>
-                        <div class="service-meta"><span class="service-price">$85</span><span class="service-duration"><i class="fas fa-clock"></i> 90 min</span></div>
-                        <a href="#booking" class="btn btn-gold btn-sm service-book">Book Now</a>
+                    <div class="team-info">
+                        <h3>Robert Taylor</h3>
+                        <span class="team-role">Shave Expert</span>
+                        <p class="team-bio">Traditional shaving master. Trained in London's finest barbershops.</p>
+                        <div class="team-specialty">
+                            <span>Straight Razor</span>
+                            <span>Hot Towel</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Barbers Section -->
-    <section class="barbers" id="barbers">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-tag">The Team</span>
-                <h2 class="section-title">Meet Our <span class="gold-text">Barbers</span></h2>
-                <p class="section-subtitle">Master craftsmen dedicated to the art of grooming</p>
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header center reveal-up">
+                <span class="section-label">Pricing</span>
+                <h2 class="section-title">Transparent<br><span class="gold-text">Pricing</span></h2>
+                <p class="section-subtitle">Quality grooming at fair prices</p>
             </div>
-            <div class="barbers-grid">
-                <div class="barber-card">
-                    <div class="barber-image">
-                        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=500&h=600&fit=crop&crop=face" alt="Marcus Thompson" loading="lazy">
-                        <div class="barber-social"><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></div>
+            <div class="pricing-grid">
+                <div class="pricing-card reveal-up">
+                    <h3 class="pricing-title">Essential</h3>
+                    <div class="pricing-price">$35</div>
+                    <p class="pricing-desc">Perfect for a quick refresh</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Classic Haircut</li>
+                        <li><i class="fas fa-check"></i> Wash & Dry</li>
+                        <li><i class="fas fa-check"></i> Styling</li>
+                        <li><i class="fas fa-check"></i> Complimentary Beverage</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Beard Trim</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Hot Towel Treatment</li>
+                    </ul>
+                    <a href="#booking" class="btn btn-outline btn-block">Book Now</a>
+                </div>
+                <div class="pricing-card featured reveal-up">
+                    <div class="pricing-badge">Best Value</div>
+                    <h3 class="pricing-title">Premium</h3>
+                    <div class="pricing-price">$65</div>
+                    <p class="pricing-desc">Our most popular choice</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Classic Haircut</li>
+                        <li><i class="fas fa-check"></i> Wash & Deep Condition</li>
+                        <li><i class="fas fa-check"></i> Beard Trim & Shape</li>
+                        <li><i class="fas fa-check"></i> Hot Towel Treatment</li>
+                        <li><i class="fas fa-check"></i> Premium Styling</li>
+                        <li><i class="fas fa-check"></i> Complimentary Beverage</li>
+                    </ul>
+                    <a href="#booking" class="btn btn-primary btn-block">Book Now</a>
+                </div>
+                <div class="pricing-card reveal-up">
+                    <h3 class="pricing-title">The Gentlemen</h3>
+                    <div class="pricing-price">$95</div>
+                    <p class="pricing-desc">The ultimate experience</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Premium Haircut</li>
+                        <li><i class="fas fa-check"></i> Wash & Treatment</li>
+                        <li><i class="fas fa-check"></i> Full Beard Sculpt</li>
+                        <li><i class="fas fa-check"></i> Straight Razor Shave</li>
+                        <li><i class="fas fa-check"></i> Facial Treatment</li>
+                        <li><i class="fas fa-check"></i> Premium Beverage & Snacks</li>
+                    </ul>
+                    <a href="#booking" class="btn btn-outline btn-block">Book Now</a>
+                </div>
+            </div>
+            <div class="pricing-table-wrapper reveal-up">
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Duration</th>
+                            <th>Price</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Classic Haircut</strong></td>
+                            <td>30 min</td>
+                            <td class="price">$35</td>
+                            <td><a href="#booking" class="btn btn-sm btn-outline">Book</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Beard Trim</strong></td>
+                            <td>20 min</td>
+                            <td class="price">$25</td>
+                            <td><a href="#booking" class="btn btn-sm btn-outline">Book</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hair Wash & Treatment</strong></td>
+                            <td>25 min</td>
+                            <td class="price">$20</td>
+                            <td><a href="#booking" class="btn btn-sm btn-outline">Book</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hot Towel Shave</strong></td>
+                            <td>35 min</td>
+                            <td class="price">$40</td>
+                            <td><a href="#booking" class="btn btn-sm btn-outline">Book</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kids Haircut</strong></td>
+                            <td>25 min</td>
+                            <td class="price">$25</td>
+                            <td><a href="#booking" class="btn btn-sm btn-outline">Book</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hair Color</strong></td>
+                            <td>60 min</td>
+                            <td class="price">$55+</td>
+                            <td><a href="#booking" class="btn btn-sm btn-outline">Book</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Scalp Treatment</strong></td>
+                            <td>30 min</td>
+                            <td class="price">$30</td>
+                            <td><a href="#booking" class="btn btn-sm btn-outline">Book</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking" id="booking">
+        <div class="container">
+            <div class="booking-grid">
+                <div class="booking-info reveal-left">
+                    <span class="section-label">Book Now</span>
+                    <h2 class="section-title">Schedule Your<br><span class="gold-text">Appointment</span></h2>
+                    <p class="booking-desc">
+                        Ready to look your best? Book your appointment today and experience 
+                        the difference of premium grooming. Walk-ins welcome, but appointments 
+                        are recommended for the best experience.
+                    </p>
+                    <div class="booking-features">
+                        <div class="booking-feature">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Quick Booking</h4>
+                                <p>Book in under 2 minutes</p>
+                            </div>
+                        </div>
+                        <div class="booking-feature">
+                            <i class="fas fa-calendar-check"></i>
+                            <div>
+                                <h4>Instant Confirmation</h4>
+                                <p>Receive confirmation immediately</p>
+                            </div>
+                        </div>
+                        <div class="booking-feature">
+                            <i class="fas fa-undo"></i>
+                            <div>
+                                <h4>Free Cancellation</h4>
+                                <p>Cancel up to 2 hours before</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="barber-info">
-                        <h3 class="barber-name">Marcus Thompson</h3>
-                        <span class="barber-title">Master Barber & Founder</span>
-                        <div class="barber-rating"><i class="fas fa-star"></i><span>4.9</span><span class="barber-reviews">(312 reviews)</span></div>
-                        <p class="barber-specialty">Specialties: Skin Fades, Classic Cuts, Beard Sculpting</p>
-                        <span class="barber-exp"><i class="fas fa-medal"></i> 18 years experience</span>
+                    <div class="booking-contact">
+                        <div class="booking-contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(555) 123-4567</span>
+                        </div>
+                        <div class="booking-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>book@gentlemensden.com</span>
+                        </div>
                     </div>
                 </div>
-                <div class="barber-card">
-                    <div class="barber-image">
-                        <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=500&h=600&fit=crop&crop=face" alt="James Rivera" loading="lazy">
-                        <div class="barber-social"><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></div>
-                    </div>
-                    <div class="barber-info">
-                        <h3 class="barber-name">James Rivera</h3>
-                        <span class="barber-title">Senior Barber</span>
-                        <div class="barber-rating"><i class="fas fa-star"></i><span>4.8</span><span class="barber-reviews">(278 reviews)</span></div>
-                        <p class="barber-specialty">Specialties: Textured Cuts, Modern Styles, Color</p>
-                        <span class="barber-exp"><i class="fas fa-medal"></i> 12 years experience</span>
-                    </div>
-                </div>
-                <div class="barber-card">
-                    <div class="barber-image">
-                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&h=600&fit=crop&crop=face" alt="David Chen" loading="lazy">
-                        <div class="barber-social"><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></div>
-                    </div>
-                    <div class="barber-info">
-                        <h3 class="barber-name">David Chen</h3>
-                        <span class="barber-title">Barber</span>
-                        <div class="barber-rating"><i class="fas fa-star"></i><span>4.9</span><span class="barber-reviews">(195 reviews)</span></div>
-                        <p class="barber-specialty">Specialties: Straight Razor Shaves, Beard Art, Designs</p>
-                        <span class="barber-exp"><i class="fas fa-medal"></i> 8 years experience</span>
-                    </div>
-                </div>
-                <div class="barber-card">
-                    <div class="barber-image">
-                        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&h=600&fit=crop&crop=face" alt="Alex Turner" loading="lazy">
-                        <div class="barber-social"><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></div>
-                    </div>
-                    <div class="barber-info">
-                        <h3 class="barber-name">Alex Turner</h3>
-                        <span class="barber-title">Junior Barber</span>
-                        <div class="barber-rating"><i class="fas fa-star"></i><span>4.7</span><span class="barber-reviews">(156 reviews)</span></div>
-                        <p class="barber-specialty">Specialties: Kids Cuts, Creative Designs, Fades</p>
-                        <span class="barber-exp"><i class="fas fa-medal"></i> 5 years experience</span>
-                    </div>
+                <div class="booking-form-wrapper reveal-right">
+                    <form class="booking-form" id="bookingForm" novalidate>
+                        <h3>Book Your Appointment</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                                <span class="form-error" id="firstNameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+                                <span class="form-error" id="lastNameError"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+                            <span class="form-error" id="phoneError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com">
+                            <span class="form-error" id="emailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Select Service *</label>
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected>Choose a service...</option>
+                                <option value="haircut">Classic Haircut - $35</option>
+                                <option value="beard">Beard Trim & Shape - $25</option>
+                                <option value="wash">Hair Wash & Treatment - $20</option>
+                                <option value="shave">Hot Towel Shave - $40</option>
+                                <option value="kids">Kids Haircut - $25</option>
+                                <option value="color">Hair Color - $55+</option>
+                                <option value="premium">Premium Package - $65</option>
+                                <option value="gentlemen">The Gentlemen - $95</option>
+                            </select>
+                            <span class="form-error" id="serviceError"></span>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Preferred Date *</label>
+                                <input type="date" id="date" name="date" required>
+                                <span class="form-error" id="dateError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Preferred Time *</label>
+                                <select id="time" name="time" required>
+                                    <option value="" disabled selected>Select time...</option>
+                                    <option value="9:00">9:00 AM</option>
+                                    <option value="9:30">9:30 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="10:30">10:30 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="11:30">11:30 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="12:30">12:30 PM</option>
+                                    <option value="1:00">1:00 PM</option>
+                                    <option value="1:30">1:30 PM</option>
+                                    <option value="2:00">2:00 PM</option>
+                                    <option value="2:30">2:30 PM</option>
+                                    <option value="3:00">3:00 PM</option>
+                                    <option value="3:30">3:30 PM</option>
+                                    <option value="4:00">4:00 PM</option>
+                                    <option value="4:30">4:30 PM</option>
+                                    <option value="5:00">5:00 PM</option>
+                                    <option value="5:30">5:30 PM</option>
+                                    <option value="6:00">6:00 PM</option>
+                                    <option value="6:30">6:30 PM</option>
+                                    <option value="7:00">7:00 PM</option>
+                                </select>
+                                <span class="form-error" id="timeError"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="barber">Preferred Barber (Optional)</label>
+                            <select id="barber" name="barber">
+                                <option value="" selected>No preference</option>
+                                <option value="marcus">Marcus Johnson</option>
+                                <option value="david">David Chen</option>
+                                <option value="james">James Williams</option>
+                                <option value="robert">Robert Taylor</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Special Requests</label>
+                            <textarea id="notes" name="notes" rows="3" placeholder="Any specific requests or notes..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">
+                            <i class="fas fa-calendar-check"></i>
+                            Confirm Booking
+                        </button>
+                        <p class="form-note">* Required fields. We'll send a confirmation to your phone.</p>
+                    </form>
                 </div>
             </div>
         </div>
@@ -271,153 +614,98 @@
 
     <!-- Gallery Section -->
     <section class="gallery" id="gallery">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-tag">Our Work</span>
-                <h2 class="section-title">Transformation <span class="gold-text">Gallery</span></h2>
-                <p class="section-subtitle">See the Royal Fade difference in every cut</p>
+        <div class="container">
+            <div class="section-header center reveal-up">
+                <span class="section-label">Gallery</span>
+                <h2 class="section-title">Our<br><span class="gold-text">Work</span></h2>
+                <p class="section-subtitle">Browse our portfolio of precision cuts and styles</p>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item gallery-item-large">
-                    <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800&h=600&fit=crop" alt="Haircut transformation" loading="lazy">
-                    <div class="gallery-overlay"><div class="gallery-info"><span class="gallery-tag">Skin Fade</span><h4 class="gallery-title">Precision Low Fade</h4></div><button class="gallery-expand" aria-label="View full size"><i class="fas fa-expand"></i></button></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1599351431613-18ef1fdd27e1?w=400&h=300&fit=crop" alt="Beard trim" loading="lazy">
-                    <div class="gallery-overlay"><div class="gallery-info"><span class="gallery-tag">Beard Trim</span><h4 class="gallery-title">Sculpted Beard</h4></div><button class="gallery-expand" aria-label="View full size"><i class="fas fa-expand"></i></button></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=400&h=300&fit=crop" alt="Barber at work" loading="lazy">
-                    <div class="gallery-overlay"><div class="gallery-info"><span class="gallery-tag">Classic Cut</span><h4 class="gallery-title">Textured Crop</h4></div><button class="gallery-expand" aria-label="View full size"><i class="fas fa-expand"></i></button></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=400&h=300&fit=crop" alt="Shop interior" loading="lazy">
-                    <div class="gallery-overlay"><div class="gallery-info"><span class="gallery-tag">Shop</span><h4 class="gallery-title">Royal Interior</h4></div><button class="gallery-expand" aria-label="View full size"><i class="fas fa-expand"></i></button></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=400&h=300&fit=crop" alt="Hot towel shave" loading="lazy">
-                    <div class="gallery-overlay"><div class="gallery-info"><span class="gallery-tag">Shave</span><h4 class="gallery-title">Hot Towel Shave</h4></div><button class="gallery-expand" aria-label="View full size"><i class="fas fa-expand"></i></button></div>
-                </div>
-                <div class="gallery-item gallery-item-wide">
-                    <img src="https://images.unsplash.com/photo-1599351431202-6e0c3e1f3c5e?w=800&h=400&fit=crop" alt="Barber tools" loading="lazy">
-                    <div class="gallery-overlay"><div class="gallery-info"><span class="gallery-tag">Tools</span><h4 class="gallery-title">Premium Equipment</h4></div><button class="gallery-expand" aria-label="View full size"><i class="fas fa-expand"></i></button></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&h=300&fit=crop" alt="Fade detail" loading="lazy">
-                    <div class="gallery-overlay"><div class="gallery-info"><span class="gallery-tag">Fade</span><h4 class="gallery-title">Drop Fade</h4></div><button class="gallery-expand" aria-label="View full size"><i class="fas fa-expand"></i></button></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&h=300&fit=crop" alt="Styling" loading="lazy">
-                    <div class="gallery-overlay"><div class="gallery-info"><span class="gallery-tag">Style</span><h4 class="gallery-title">Pompadour Style</h4></div><button class="gallery-expand" aria-label="View full size"><i class="fas fa-expand"></i></button></div>
-                </div>
+            <div class="gallery-filter reveal-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="haircuts">Haircuts</button>
+                <button class="filter-btn" data-filter="beards">Beards</button>
+                <button class="filter-btn" data-filter="styles">Styles</button>
             </div>
-        </div>
-    </section>
-
-    <!-- Lightbox Modal -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" aria-label="Close lightbox"><i class="fas fa-times"></i></button>
-        <button class="lightbox-prev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
-        <img src="" alt="Gallery image" class="lightbox-img" id="lightbox-img">
-        <button class="lightbox-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
-        <div class="lightbox-caption" id="lightbox-caption"></div>
-    </div>
-
-    <!-- Pricing Section -->
-    <section class="pricing" id="pricing">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-tag">Transparent Pricing</span>
-                <h2 class="section-title">Our <span class="gold-text">Pricing</span></h2>
-                <p class="section-subtitle">Premium grooming at fair prices</p>
-            </div>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">The Gentleman</h3>
-                        <div class="pricing-price"><span class="price-currency">$</span><span class="price-amount">35</span></div>
-                        <span class="pricing-period">per visit</span>
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item" data-category="haircuts">
+                    <img src="https://images.unsplash.com/photo-1622286342621-4bd9c6788a7a?w=400&h=500&fit=crop" alt="Modern fade haircut" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Modern Fade</h4>
+                            <p>By Marcus Johnson</p>
+                            <button class="gallery-zoom"><i class="fas fa-expand"></i></button>
+                        </div>
                     </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Classic Haircut</li>
-                        <li><i class="fas fa-check"></i> Shampoo & Condition</li>
-                        <li><i class="fas fa-check"></i> Neck Shave</li>
-                        <li><i class="fas fa-check"></i> Hot Towel Finish</li>
-                        <li><i class="fas fa-check"></i> Style Consultation</li>
-                        <li class="feature-x"><i class="fas fa-times"></i> Beard Trim</li>
-                        <li class="feature-x"><i class="fas fa-times"></i> Facial Treatment</li>
-                    </ul>
-                    <a href="#booking" class="btn btn-outline-gold btn-full">Book Now</a>
                 </div>
-                <div class="pricing-card pricing-featured">
-                    <div class="pricing-badge">Most Popular</div>
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">The Royal</h3>
-                        <div class="pricing-price"><span class="price-currency">$</span><span class="price-amount">55</span></div>
-                        <span class="pricing-period">per visit</span>
+                <div class="gallery-item" data-category="beards">
+                    <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&h=500&fit=crop" alt="Beard grooming" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Beard Sculpt</h4>
+                            <p>By Robert Taylor</p>
+                            <button class="gallery-zoom"><i class="fas fa-expand"></i></button>
+                        </div>
                     </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Premium Haircut</li>
-                        <li><i class="fas fa-check"></i> Skin Fade or Classic</li>
-                        <li><i class="fas fa-check"></i> Beard Trim & Shape</li>
-                        <li><i class="fas fa-check"></i> Hot Towel Treatment</li>
-                        <li><i class="fas fa-check"></i> Premium Styling</li>
-                        <li><i class="fas fa-check"></i> Scalp Massage</li>
-                        <li class="feature-x"><i class="fas fa-times"></i> Facial Treatment</li>
-                    </ul>
-                    <a href="#booking" class="btn btn-gold btn-full">Book Now</a>
                 </div>
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">The King</h3>
-                        <div class="pricing-price"><span class="price-currency">$</span><span class="price-amount">85</span></div>
-                        <span class="pricing-period">per visit</span>
+                <div class="gallery-item" data-category="styles">
+                    <img src="https://images.unsplash.com/photo-1599351431202-6e0c0f3a24f9?w=400&h=500&fit=crop" alt="Classic style" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Classic Gentleman</h4>
+                            <p>By Marcus Johnson</p>
+                            <button class="gallery-zoom"><i class="fas fa-expand"></i></button>
+                        </div>
                     </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Premium Haircut</li>
-                        <li><i class="fas fa-check"></i> Skin Fade or Classic</li>
-                        <li><i class="fas fa-check"></i> Full Beard Sculpt</li>
-                        <li><i class="fas fa-check"></i> Hot Towel Shave</li>
-                        <li><i class="fas fa-check"></i> Facial Treatment</li>
-                        <li><i class="fas fa-check"></i> Scalp Massage</li>
-                        <li><i class="fas fa-check"></i> Premium Products</li>
-                    </ul>
-                    <a href="#booking" class="btn btn-outline-gold btn-full">Book Now</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Statistics Section -->
-    <section class="statistics" id="statistics">
-        <div class="stats-bg"><div class="stats-overlay"></div></div>
-        <div class="section-container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
-                    <span class="stat-number" data-target="14">0</span>
-                    <span class="stat-label">Years of Experience</span>
+                <div class="gallery-item" data-category="haircuts">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&h=500&fit=crop" alt="Textured crop" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Textured Crop</h4>
+                            <p>By David Chen</p>
+                            <button class="gallery-zoom"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <div class="stat-icon"><i class="fas fa-users"></i></div>
-                    <span class="stat-number" data-target="25000">0</span>
-                    <span class="stat-suffix">+</span>
-                    <span class="stat-label">Happy Clients</span>
+                <div class="gallery-item" data-category="styles">
+                    <img src="https://images.unsplash.com/photo-1605497788044-5a32c4e214e0?w=400&h=500&fit=crop" alt="Slick back style" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Slick Back</h4>
+                            <p>By James Williams</p>
+                            <button class="gallery-zoom"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <div class="stat-icon"><i class="fas fa-cut"></i></div>
-                    <span class="stat-number" data-target="50000">0</span>
-                    <span class="stat-suffix">+</span>
-                    <span class="stat-label">Haircuts Completed</span>
+                <div class="gallery-item" data-category="beards">
+                    <img src="https://images.unsplash.com/photo-1621607512214-682974c146ba?w=400&h=500&fit=crop" alt="Full beard trim" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Full Beard Trim</h4>
+                            <p>By Robert Taylor</p>
+                            <button class="gallery-zoom"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <div class="stat-icon"><i class="fas fa-star"></i></div>
-                    <span class="stat-number" data-target="1200">0</span>
-                    <span class="stat-suffix">+</span>
-                    <span class="stat-label">Five-Star Reviews</span>
+                <div class="gallery-item" data-category="haircuts">
+                    <img src="https://images.unsplash.com/photo-1634302086887-13b5281d03a0?w=400&h=500&fit=crop" alt="Buzz cut" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Buzz Cut</h4>
+                            <p>By David Chen</p>
+                            <button class="gallery-zoom"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="styles">
+                    <img src="https://images.unsplash.com/photo-1503951912445-e162d3bc4930?w=400&h=500&fit=crop" alt="Pompadour style" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Pompadour</h4>
+                            <p>By James Williams</p>
+                            <button class="gallery-zoom"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -425,110 +713,158 @@
 
     <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-tag">Client Love</span>
-                <h2 class="section-title">What They <span class="gold-text">Say</span></h2>
+        <div class="container">
+            <div class="section-header center reveal-up">
+                <span class="section-label">Testimonials</span>
+                <h2 class="section-title">What Our<br><span class="gold-text">Clients Say</span></h2>
                 <p class="section-subtitle">Real reviews from real gentlemen</p>
             </div>
-            <div class="testimonials-slider-wrapper">
-                <button class="slider-btn slider-prev" id="slider-prev" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
-                <div class="testimonials-slider" id="testimonials-slider">
-                    <div class="testimonial-slide active">
-                        <div class="testimonial-card">
-                            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <p class="testimonial-text">"I've been coming to Royal Fade for 3 years now. Marcus never disappoints. The attention to detail on my skin fade is unmatched. The atmosphere is premium and the service is world-class."</p>
-                            <div class="testimonial-author">
-                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" alt="Michael Roberts" class="author-avatar" loading="lazy">
-                                <div class="author-info"><span class="author-name">Michael Roberts</span><span class="author-title">Business Executive</span></div>
+            <div class="testimonials-slider" id="testimonialsSlider">
+                <div class="testimonials-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "The best barber shop I've ever been to. Marcus understood exactly what I wanted 
+                            and delivered beyond my expectations. The atmosphere is incredible and the service 
+                            is top-notch."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face" alt="Michael Brown" loading="lazy">
+                            <div class="testimonial-info">
+                                <h4>Michael Brown</h4>
+                                <span>Business Executive</span>
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-slide">
-                        <div class="testimonial-card">
-                            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <p class="testimonial-text">"The hot towel shave experience is something every man should try. David's straight razor skills are incredible. I leave feeling like a million bucks every single time."</p>
-                            <div class="testimonial-author">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Jonathan Blake" class="author-avatar" loading="lazy">
-                                <div class="author-info"><span class="author-name">Jonathan Blake</span><span class="author-title">Architect</span></div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "I've been coming here for 3 years and never been disappointed. The attention to 
+                            detail is remarkable. David's fade technique is absolutely flawless. Highly recommend!"
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face" alt="Christopher Lee" loading="lazy">
+                            <div class="testimonial-info">
+                                <h4>Christopher Lee</h4>
+                                <span>Software Engineer</span>
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-slide">
-                        <div class="testimonial-card">
-                            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            <p class="testimonial-text">"My son loves coming here for his haircuts. Alex is amazing with kids — patient, fun, and gives him the coolest styles. The shop has a great vibe that makes it feel special."</p>
-                            <div class="testimonial-author">
-                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" alt="Sarah Mitchell" class="author-avatar" loading="lazy">
-                                <div class="author-info"><span class="author-name">Sarah Mitchell</span><span class="author-title">Marketing Director</span></div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "The Gentlemen's Package is worth every penny. Hot towel shave, precision haircut, 
+                            and beard trim all in one session. I leave feeling like a million bucks every time."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Daniel Park" loading="lazy">
+                            <div class="testimonial-info">
+                                <h4>Daniel Park</h4>
+                                <span>Marketing Director</span>
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-slide">
-                        <div class="testimonial-card">
-                            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <p class="testimonial-text">"James transformed my look completely. The textured crop he gave me gets compliments everywhere I go. Royal Fade isn't just a barbershop — it's a grooming sanctuary."</p>
-                            <div class="testimonial-author">
-                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Daniel Hayes" class="author-avatar" loading="lazy">
-                                <div class="author-info"><span class="author-name">Daniel Hayes</span><span class="author-title">Software Engineer</span></div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Finally found a barber who knows how to handle my beard! Robert is a true artist. 
+                            The shop has a great vibe, premium products, and the complimentary whiskey is a nice touch."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" alt="William Adams" loading="lazy">
+                            <div class="testimonial-info">
+                                <h4>William Adams</h4>
+                                <span>Architect</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button class="slider-btn slider-next" id="slider-next" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
-            </div>
-            <div class="slider-dots" id="slider-dots">
-                <button class="slider-dot active" data-index="0" aria-label="Go to slide 1"></button>
-                <button class="slider-dot" data-index="1" aria-label="Go to slide 2"></button>
-                <button class="slider-dot" data-index="2" aria-label="Go to slide 3"></button>
-                <button class="slider-dot" data-index="3" aria-label="Go to slide 4"></button>
+                <div class="testimonials-nav">
+                    <button class="testimonial-prev" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+                    <div class="testimonials-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="testimonial-next" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Booking Section -->
-    <section class="booking" id="booking">
-        <div class="section-container">
-            <div class="booking-grid">
-                <div class="booking-info">
-                    <span class="section-tag">Book Your Visit</span>
-                    <h2 class="section-title">Schedule Your <span class="gold-text">Appointment</span></h2>
-                    <p class="booking-desc">Ready to elevate your look? Book your appointment online and experience the Royal Fade difference. Walk-ins welcome, but appointments are recommended.</p>
-                    <div class="booking-contact">
-                        <div class="booking-contact-item"><i class="fas fa-phone-alt"></i><div><span class="contact-label">Call Us</span><span class="contact-value">(555) 234-5678</span></div></div>
-                        <div class="booking-contact-item"><i class="fas fa-envelope"></i><div><span class="contact-label">Email</span><span class="contact-value">book@royalfade.com</span></div></div>
-                        <div class="booking-contact-item"><i class="fas fa-map-marker-alt"></i><div><span class="contact-label">Location</span><span class="contact-value">124 King Street, Downtown</span></div></div>
+    <!-- Hours Section -->
+    <section class="hours" id="hours">
+        <div class="container">
+            <div class="hours-grid">
+                <div class="hours-info reveal-left">
+                    <span class="section-label">Business Hours</span>
+                    <h2 class="section-title">When We're<br><span class="gold-text">Open</span></h2>
+                    <p class="hours-desc">
+                        We're here to keep you looking sharp. Check our schedule and plan your visit. 
+                        Walk-ins are always welcome during business hours.
+                    </p>
+                    <div class="hours-status" id="hoursStatus">
+                        <span class="status-indicator" id="statusIndicator"></span>
+                        <span id="statusText">Checking...</span>
                     </div>
-                    <div class="booking-hours">
-                        <h4><i class="fas fa-clock"></i> Opening Hours</h4>
-                        <div class="hours-row"><span>Monday — Friday</span><span>9:00 AM — 8:00 PM</span></div>
-                        <div class="hours-row"><span>Saturday</span><span>8:00 AM — 6:00 PM</span></div>
-                        <div class="hours-row"><span>Sunday</span><span>10:00 AM — 4:00 PM</span></div>
-                    </div>
+                    <a href="#booking" class="btn btn-primary">
+                        <i class="fas fa-calendar-check"></i>
+                        Book Appointment
+                    </a>
                 </div>
-                <div class="booking-form-wrapper">
-                    <form class="booking-form" id="booking-form">
-                        <div class="form-row">
-                            <div class="form-group"><label for="booking-name">Full Name</label><input type="text" id="booking-name" name="name" placeholder="John Doe" required></div>
-                            <div class="form-group"><label for="booking-phone">Phone Number</label><input type="tel" id="booking-phone" name="phone" placeholder="(555) 123-4567" required></div>
-                        </div>
-                        <div class="form-group"><label for="booking-email">Email Address</label><input type="email" id="booking-email" name="email" placeholder="john@example.com" required></div>
-                        <div class="form-row">
-                            <div class="form-group"><label for="booking-barber">Choose Barber</label><select id="booking-barber" name="barber" required><option value="">Select a barber</option><option value="marcus">Marcus Thompson</option><option value="james">James Rivera</option><option value="david">David Chen</option><option value="alex">Alex Turner</option><option value="any">Any Available</option></select></div>
-                            <div class="form-group"><label for="booking-service">Choose Service</label><select id="booking-service" name="service" required><option value="">Select a service</option><option value="haircut">Classic Haircut — $35</option><option value="fade">Skin Fade — $40</option><option value="beard">Beard Trim — $25</option><option value="shave">Hot Towel Shave — $45</option><option value="styling">Hair Styling — $30</option><option value="kids">Kids Haircut — $25</option><option value="premium">Premium Grooming — $85</option></select></div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group"><label for="booking-date">Preferred Date</label><input type="date" id="booking-date" name="date" required></div>
-                            <div class="form-group"><label for="booking-time">Preferred Time</label><select id="booking-time" name="time" required><option value="">Select time</option><option value="9:00">9:00 AM</option><option value="10:00">10:00 AM</option><option value="11:00">11:00 AM</option><option value="12:00">12:00 PM</option><option value="13:00">1:00 PM</option><option value="14:00">2:00 PM</option><option value="15:00">3:00 PM</option><option value="16:00">4:00 PM</option><option value="17:00">5:00 PM</option><option value="18:00">6:00 PM</option><option value="19:00">7:00 PM</option></select></div>
-                        </div>
-                        <div class="form-group"><label for="booking-notes">Special Requests (Optional)</label><textarea id="booking-notes" name="notes" rows="3" placeholder="Any specific requests..."></textarea></div>
-                        <button type="submit" class="btn btn-gold btn-lg btn-full"><i class="fas fa-calendar-check"></i>Confirm Booking</button>
-                    </form>
-                    <div class="booking-success" id="booking-success">
-                        <div class="success-icon"><i class="fas fa-check-circle"></i></div>
-                        <h3>Booking Confirmed!</h3>
-                        <p>Thank you for choosing Royal Fade. We've sent a confirmation to your email.</p>
-                        <button class="btn btn-outline-gold" id="new-booking">Make Another Booking</button>
+                <div class="hours-schedule reveal-right">
+                    <div class="schedule-item" data-day="monday">
+                        <span class="day">Monday</span>
+                        <span class="time">9:00 AM - 7:00 PM</span>
+                    </div>
+                    <div class="schedule-item" data-day="tuesday">
+                        <span class="day">Tuesday</span>
+                        <span class="time">9:00 AM - 7:00 PM</span>
+                    </div>
+                    <div class="schedule-item" data-day="wednesday">
+                        <span class="day">Wednesday</span>
+                        <span class="time">9:00 AM - 7:00 PM</span>
+                    </div>
+                    <div class="schedule-item" data-day="thursday">
+                        <span class="day">Thursday</span>
+                        <span class="time">9:00 AM - 8:00 PM</span>
+                    </div>
+                    <div class="schedule-item" data-day="friday">
+                        <span class="day">Friday</span>
+                        <span class="time">9:00 AM - 8:00 PM</span>
+                    </div>
+                    <div class="schedule-item" data-day="saturday">
+                        <span class="day">Saturday</span>
+                        <span class="time">8:00 AM - 6:00 PM</span>
+                    </div>
+                    <div class="schedule-item closed" data-day="sunday">
+                        <span class="day">Sunday</span>
+                        <span class="time">Closed</span>
                     </div>
                 </div>
             </div>
@@ -537,38 +873,68 @@
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-tag">Get In Touch</span>
-                <h2 class="section-title">Contact <span class="gold-text">Us</span></h2>
-                <p class="section-subtitle">We'd love to hear from you</p>
+        <div class="container">
+            <div class="section-header center reveal-up">
+                <span class="section-label">Contact</span>
+                <h2 class="section-title">Get In<br><span class="gold-text">Touch</span></h2>
+                <p class="section-subtitle">Visit us or reach out - we'd love to hear from you</p>
             </div>
             <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-card"><div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div><h4>Visit Us</h4><p>124 King Street, Suite 200<br>Downtown District, NY 10001</p></div>
-                    <div class="contact-card"><div class="contact-card-icon"><i class="fas fa-phone-alt"></i></div><h4>Call Us</h4><p>(555) 234-5678<br>(555) 234-5679</p></div>
-                    <div class="contact-card"><div class="contact-card-icon"><i class="fas fa-envelope"></i></div><h4>Email Us</h4><p>info@royalfade.com<br>book@royalfade.com</p></div>
-                    <div class="contact-card"><div class="contact-card-icon"><i class="fas fa-clock"></i></div><h4>Opening Hours</h4><p>Mon-Fri: 9AM — 8PM<br>Sat: 8AM — 6PM | Sun: 10AM — 4PM</p></div>
-                </div>
-                <div class="contact-form-wrapper">
-                    <h3>Send Us a Message</h3>
-                    <form class="contact-form" id="contact-form">
-                        <div class="form-row">
-                            <div class="form-group"><label for="contact-name">Name</label><input type="text" id="contact-name" name="name" placeholder="Your name" required></div>
-                            <div class="form-group"><label for="contact-email">Email</label><input type="email" id="contact-email" name="email" placeholder="Your email" required></div>
+                <div class="contact-info reveal-left">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
                         </div>
-                        <div class="form-group"><label for="contact-subject">Subject</label><input type="text" id="contact-subject" name="subject" placeholder="How can we help?" required></div>
-                        <div class="form-group"><label for="contact-message">Message</label><textarea id="contact-message" name="message" rows="5" placeholder="Your message..." required></textarea></div>
-                        <button type="submit" class="btn btn-gold btn-full"><i class="fas fa-paper-plane"></i>Send Message</button>
-                    </form>
-                    <div class="contact-success" id="contact-success">
-                        <div class="success-icon"><i class="fas fa-check-circle"></i></div>
-                        <h4>Message Sent!</h4>
-                        <p>We'll get back to you within 24 hours.</p>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>123 Barber Street<br>Downtown District<br>New York, NY 10001</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p><a href="tel:+15551234567">(555) 123-4567</a></p>
+                            <p><a href="tel:+15559876543">(555) 987-6543</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p><a href="mailto:info@gentlemensden.com">info@gentlemensden.com</a></p>
+                            <p><a href="mailto:book@gentlemensden.com">book@gentlemensden.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Business Hours</h4>
+                            <p>Mon - Fri: 9:00 AM - 7:00 PM</p>
+                            <p>Sat: 8:00 AM - 6:00 PM</p>
+                            <p>Sun: Closed</p>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <div class="contact-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2!2d-73.99!3d40.73!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQzJzQ4LjAiTiA3M8KwNTknMjQuMCJX!5e0!3m2!1sen!2sus!4v1" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Royal Fade Location"></iframe>
+                <div class="contact-map reveal-right">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p>Google Maps Integration</p>
+                        <span>123 Barber Street, New York, NY 10001</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -576,34 +942,82 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="#home" class="footer-logo"><i class="fas fa-cut"></i><div class="logo-text"><span class="logo-main">Royal Fade</span><span class="logo-sub">Barbershop</span></div></a>
-                    <p class="footer-desc">Premium men's grooming since 2012. Where tradition meets modern style in an atmosphere of refined masculinity.</p>
-                    <div class="footer-social"><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a></div>
-                </div>
-                <div class="footer-column">
-                    <h4 class="footer-title">Quick Links</h4>
-                    <ul class="footer-links"><li><a href="#home">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#services">Services</a></li><li><a href="#barbers">Our Barbers</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#pricing">Pricing</a></li></ul>
-                </div>
-                <div class="footer-column">
-                    <h4 class="footer-title">Services</h4>
-                    <ul class="footer-links"><li><a href="#services">Classic Haircut</a></li><li><a href="#services">Skin Fade</a></li><li><a href="#services">Beard Trim</a></li><li><a href="#services">Hot Towel Shave</a></li><li><a href="#services">Hair Styling</a></li><li><a href="#services">Premium Grooming</a></li></ul>
-                </div>
-                <div class="footer-column">
-                    <h4 class="footer-title">Newsletter</h4>
-                    <p class="footer-newsletter-text">Subscribe for grooming tips, exclusive offers, and updates.</p>
-                    <form class="footer-newsletter" id="newsletter-form"><input type="email" placeholder="Your email address" required><button type="submit" aria-label="Subscribe"><i class="fas fa-arrow-right"></i></button></form>
-                    <div class="newsletter-success" id="newsletter-success"><i class="fas fa-check-circle"></i> Subscribed successfully!</div>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="#home" class="footer-logo">
+                            <i class="fas fa-cut"></i>
+                            <span>The Gentlemen's Den</span>
+                        </a>
+                        <p>Premium grooming for the modern gentleman. Where tradition meets style since 2015.</p>
+                        <div class="footer-socials">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#team">Our Barbers</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#services">Classic Haircut</a></li>
+                            <li><a href="#services">Beard Trim</a></li>
+                            <li><a href="#services">Hot Towel Shave</a></li>
+                            <li><a href="#services">Hair Color</a></li>
+                            <li><a href="#services">Kids Haircut</a></li>
+                            <li><a href="#services">Premium Packages</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> 123 Barber St, NY 10001</li>
+                            <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                            <li><i class="fas fa-envelope"></i> info@gentlemensden.com</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p class="footer-copyright">&copy; 2026 Royal Fade Barbershop. All rights reserved.</p>
-                <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Cookie Policy</a></div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 The Gentlemen's Den. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Booking Confirmed!</h3>
+            <p>Your appointment has been successfully scheduled. We've sent a confirmation to your phone.</p>
+            <button class="btn btn-primary btn-block" id="modalClose">Great, Thanks!</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
